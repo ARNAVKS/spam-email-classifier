@@ -16,7 +16,7 @@ Now as per NLP pipeline :
 import pandas
 table = pd.read_csv('completeSpamAssassin.csv')
 ```
-* **Text Preprocessing** : I had done Basic-Text Preprocessing, in which I had done text cleaning by doing lowercasing, removing newline character (\n), removing url links, removing '@', removing all punctuation marks and removing digits in all the texts.
+* **Text Preprocessing** : I had done Basic-Text Preprocessing, in which I had done text cleaning by doing lowercasing, removing newline character (\n), removing url links, removing '@', removing all punctuation marks, removing digits, removing all the stopwords and using stemming in all words in all the texts.
 * **Feature Engineering** : For finding the feature of of the text I used Bag of Words.
 ```python
 from sklearn.feature_extraction import CountVectorizer
@@ -26,7 +26,7 @@ cv.fit_transform(train).toarray()
 #transforming the testing data using ths code
 cv.transform(test).toarray()
 ```
-* **Model Evaluation** :  Split the data into training and testing data. I had choosen Naive Bayes Classifier for prediction. By fitting and checking the accuracy of training and testing data I got that in out of 3 Naive Bayes Classifier, Multinomial has its training data and testing data accuracy more 98%. Hence, I had choosen **Multinomial Naive Bayes Classifier** as our final model.
+* **Model Evaluation** :  Split the data into training and testing data. I had choosen Naive Bayes Classifier for prediction. By fitting and checking the accuracy of training and testing data I got that in out of 3 Naive Bayes Classifier, Multinomial has its training data and testing data accuracy more 97%. Hence, I had choosen **Multinomial Naive Bayes Classifier** as our final model.
 ```python
 from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
 gnb = GaussianNB()
@@ -38,29 +38,29 @@ Comparing all the classsifier after fitting the data,
 1. **Gaussian Naive Bayes Classifier :**
  * Training Data Accuracy
 ```python
-0.9968253968253968
+0.9063492063492063
 ```
  * Testing Data Accuracy
 ```python
-0.9456029011786038
+0.8884859474161378
 ```
 2. **Bernoulli Naive Bayes Classifier :**
  * Training Data Accuracy
 ```python
-0.9319727891156463
+0.9607709750566893
 ```
  * Testing Data Accuracy
 ```python
-0.9129646418857661
+0.958295557570263
 ```
 3. **Multinomial Naive Bayes Classifier :**
  * Training Data Accuracy
 ```python
-0.9961451247165533
+0.9807256235827665
 ```
  * Testing Data Accuracy
 ```python
-0.9818676337262012
+0.970988213961922
 ```
 ##
 After Choosing the best model, now we export the vectorizer and model using pickle library. \
