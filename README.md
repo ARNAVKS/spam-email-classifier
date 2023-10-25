@@ -2,13 +2,14 @@
 Hey! I am Arnav. I made this spam classifier using NLP, in it I use **Bag of words** for text vectorizing and for prediction I use **Naive Bayes Classifier**.  
 ##
 For downloading dataset [Click Here](https://www.kaggle.com/datasets/nitishabharathi/email-spam-dataset?select=completeSpamAssassin.csv). \
-Then download '**completeSpamAssassin.csv**' in it.
+Then download '*completeSpamAssassin.csv*' in it.
 ##
 Now as per NLP pipeline :
 1. Data Acquisition
 2. Text Preprocessing
 3. Feature Engineering
 4. Model Evaluation
+5. Model Deployment
 ##
 * **Data Acquisition** : Import the dataset that we downloaded earlier in your Google Colab.
 ```python
@@ -33,7 +34,7 @@ bnb = BernoulliNB()
 mnb = MultinomialNB()
 ```
 ##
-Comparing all the classsifier ater fitting the data,
+Comparing all the classsifier after fitting the data,
 1. **Gaussian Naive Bayes Classifier :**
  * Training Data Accuracy
 ```python
@@ -61,3 +62,8 @@ Comparing all the classsifier ater fitting the data,
 ```python
 0.9818676337262012
 ```
+##
+After Choosing the best model, now we export the vectorizer and model using pickle library \
+Now, as per the NLP pipeline only one step is left to do which is **Model Deployment**. \
+I used **Streamlit library** for model deployment in **PyCharm**. \
+All the step for deployment is written in *pycharm.py* file.
