@@ -11,10 +11,12 @@ st.title('Spam Email Classifier')
 remove_url = re.compile(r'https?://\S+|www\.\S+')
 newline_rem=re.compile(r'\n')
 mail_rem=re.compile(r'[^\@]\@[^\@]')
+
 def num_remover(text):
     for i in string.digits:
         text = text.replace(i,'')
     return text
+    
 def punc(text):
     for i in string.punctuation:
         text = text.replace(i,'')
@@ -36,9 +38,7 @@ input = st.text_input('**Write the mail content here :**')
 
 if st.button('Predict'):
     input_vec = cv.transform([input])
-
     pred = model.predict(input_vec)[0]
-
     if pred == 1:
         st.header('Spam')
     else:
