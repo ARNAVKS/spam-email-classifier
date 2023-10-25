@@ -63,7 +63,7 @@ Comparing all the classsifier after fitting the data,
 0.9818676337262012
 ```
 ##
-After Choosing the best model, now we export the vectorizer and model using pickle library \
+After Choosing the best model, now we export the vectorizer and model using pickle library. \
 Now, as per the NLP pipeline only one step is left to do which is **Model Deployment**. \
 I used **Streamlit library** for model deployment in **PyCharm**. \
 All the step for deployment is written in *pycharm.py* file.
