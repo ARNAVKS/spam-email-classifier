@@ -33,36 +33,7 @@ gnb = GaussianNB()
 bnb = BernoulliNB()
 mnb = MultinomialNB()
 ```
-##
-Comparing all the classsifier after fitting the data,
-1. **Gaussian Naive Bayes Classifier :**
- * Training Data Accuracy
-```python
-0.9063492063492063
-```
- * Testing Data Accuracy
-```python
-0.8884859474161378
-```
-2. **Bernoulli Naive Bayes Classifier :**
- * Training Data Accuracy
-```python
-0.9607709750566893
-```
- * Testing Data Accuracy
-```python
-0.958295557570263
-```
-3. **Multinomial Naive Bayes Classifier :**
- * Training Data Accuracy
-```python
-0.9807256235827665
-```
- * Testing Data Accuracy
-```python
-0.970988213961922
-```
-##
+
 After Choosing the best model, now we export the vectorizer and model using pickle library. \
 Now, as per the NLP pipeline only one step is left to do which is **Model Deployment**. \
 I used **Streamlit library** for model deployment in **PyCharm**. \
